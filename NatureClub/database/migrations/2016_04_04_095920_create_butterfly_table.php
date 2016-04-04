@@ -14,6 +14,15 @@ class CreateButterflyTable extends Migration
     {
         Schema::create('butterfly', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('picture');
+            $table->string('commonName');
+            $table->string('scientificName');
+            $table->string('localStatus');
+            $table->string('generalDescription');
+            $table->string('hostPlants');
+            $table->string('lifeCycle');
+            $table->string('trivia');
+            $table->string('hotspot');
             $table->timestamps();
         });
     }

@@ -31,7 +31,7 @@
             {!! Form::text('diet',null,['class'=>'form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::label('localBreeding','Diet:') !!}
+            {!! Form::label('localBreeding','Local Breeding:') !!}
             {!! Form::text('localBreeding',null,['class'=>'form-control']) !!}
         </div>
         <div class="form-group">

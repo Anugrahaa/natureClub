@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <h1>Enter information on Birds</h1>
+    <h1 class="header">Enter information on Birds</h1>
 
     <hr>
     <div class="col-md-6">

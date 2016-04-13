@@ -1,81 +1,49 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
+    <h1>Enter information on Birds</h1>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                /*text-align: center;*/
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-           <!--  <div class="content">
-                <div class="title">Laravel 5 edittt</div>
-            </div> -->
-            <form method="post">
-                <table>
-                    <tr>
-                        <td>Pictureg</td>
-                        <td><input type="file" name="picture"></td>
-                    </tr>   
-                    <tr>
-                        <td>Common name</td>
-                        <td><input type="text" name="commonName"></td>
-                    </tr>
-                    <tr>
-                        <td>Scientific name</td>
-                        <td><input type="text" name="scientificName"></td>
-                    </tr>
-                    <tr>
-                        <td>Local Status</td>
-                        <td><input type="text" name="localstatus"></td>
-                    </tr>
-                    <tr>
-                        <td>General Description</td>
-                        <td><input type="text" name="generaldesc"></td>
-                    </tr>
-                    <tr>
-                        <td>diet</td>
-                        <td><input type="text" name="diet"></td>
-                    </tr>
-                    <tr>
-                        <td>Local Breeding</td>
-                        <td><input type="text" name="localBreeding"></td>
-                    </tr>
-                    <tr>
-                        <td>Trivia</td>
-                        <td><input type="text" name="trivia"></td>
-                    </tr>
-                </table>    
-            </form>
+    <hr>
+    <div class="col-md-6">
+    {!! Form::open(['url'=>'submit']) !!}
+        <div class="form-group">
+            {!! Form::label('picture','Picture:') !!}
+            {!! Form::file('picture',null,['class'=>'form-control']) !!}
         </div>
-    </body>
-</html>
+        <div class="form-group">
+            {!! Form::label('commonName','Common Name:') !!}
+            {!! Form::text('commonName',null,['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('scientificName','Scientific Name:') !!}
+            {!! Form::text('scientificName',null,['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('localStatus','Local Status:') !!}
+            {!! Form::text('localStatus',null,['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('generalDescription','General Description:') !!}
+            {!! Form::text('generalDescription',null,['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('diet','Diet:') !!}
+            {!! Form::text('diet',null,['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('localBreeding','Diet:') !!}
+            {!! Form::text('localBreeding',null,['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('trivia','Trivia:') !!}
+            {!! Form::text('trivia',null,['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::submit('Add Bird',['class'=>'btn btn-success form-control']) !!}
+        </div>
+        <div class="form-group">
+           {!! Form::button('Cancel',['class'=>'btn btn-danger form-control','onclick'=>'window.location.href="/"']) !!}
+        </div>
+    {!! Form::close() !!}
+    </div>
+@stop

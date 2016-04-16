@@ -1,17 +1,7 @@
-<!DOCTYPE HTML>
-<!--
-	Visualize by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>Visualize by TEMPLATED</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+@extends('app')
+
+@section('content')
 		<link rel="stylesheet" href="{{ asset('packages/template/assets/css/main.css') }}" />
-	</head>
-	<body>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -35,42 +25,15 @@
 
 						<!-- Thumbnails -->
 							<section class="thumbnails">
-							<!-- @foreach($birds as $bird) -->
-								<div>
+							@foreach($birds as $bird)
+							<div class='col-md-4'>
 									<a href="images/fulls/02.jpg">
-										<img src={{ asset('packages/template/images/avatar.jpg') }} alt="" />
-										<h3>bla</h3>
+										<img src="{{ asset('images/').'/'.$bird['picture'] }}" alt="" />
+										<h3>{{ $bird['commonName'] }}</h3>
 									</a>
-									<a href="images/fulls/02.jpg">
-										<img src="images/thumbs/02.jpg" alt="" />
-										<h3>bla</h3>
-									</a>
-								</div>
-								<!-- @endforeach -->
-								<div>
-									<a href="images/fulls/03.jpg">
-										<img src="images/thumbs/03.jpg" alt="" />
-										<h3>Lorem ipsum dolor sit amet</h3>
-									</a>
-									<a href="images/fulls/04.jpg">
-										<img src="images/thumbs/04.jpg" alt="" />
-										<h3>Lorem ipsum dolor sit amet</h3>
-									</a>
-									<a href="images/fulls/05.jpg">
-										<img src="images/thumbs/05.jpg" alt="" />
-										<h3>Lorem ipsum dolor sit amet</h3>
-									</a>
-								</div>
-								<div>
-									<a href="images/fulls/06.jpg">
-										<img src="images/thumbs/06.jpg" alt="" />
-										<h3>Lorem ipsum dolor sit amet</h3>
-									</a>
-									<a href="images/fulls/07.jpg">
-										<img src="images/thumbs/07.jpg" alt="" />
-										<h3>Lorem ipsum dolor sit amet</h3>
-									</a>
-								</div>
+							</div>
+							@endforeach
+							
 							</section>
 
 					</section>
@@ -87,6 +50,4 @@
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+@stop

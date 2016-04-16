@@ -22,7 +22,6 @@ class BirdController extends Controller
     }
     public function display(){
     	$birds = Bird::all();
-    	$picture = $birds[0]['picture'];
-    	return view('display',compact('birds','picture'));
+    	return view('display',compact('birds'));
     }
 }

@@ -5,7 +5,7 @@
 
     <hr>
     <div class="col-md-6">
-    {!! Form::open(['url'=>'submit']) !!}
+    {!! Form::open(['url'=>'submit','files' => true]) !!}
         <div class="form-group">
             {!! Form::label('picture','Picture:') !!}
             {!! Form::file('picture',null,['class'=>'form-control']) !!}

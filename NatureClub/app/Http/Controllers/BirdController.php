@@ -15,10 +15,19 @@ class BirdController extends Controller
     public function create(){
     	return view('edit');
     }
-    public function store(){
-    	$input = Request::all();
-    	Bird::create($input);
-    	return redirect('/show');
+    public function store(Request $request){
+    	$input = Request::except(['picture']);
+    	
+        if (Request::hasFile('picture')) {
+            $imageName = Request::file('picture')->getClientOriginalName();
+            Request::file('picture')->move(
+                base_path() . '/public/images/',$imageName
+            );
+        }
+
+        Bird::create($input);
+        Bird::where('commonName', $input['commonName'])->update(['picture' => $imageName]);
+        return redirect('/show');
     }
     public function display(){
     	$birds = Bird::all();

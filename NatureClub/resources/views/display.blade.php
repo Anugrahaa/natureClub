@@ -28,8 +28,8 @@
 							@foreach($birds as $bird)
 							<div class='col-md-4'>
 									<a href="images/fulls/02.jpg">
-										<img src="{{ asset('packages/template/images/').'/'.'avatar.jpg' }}" alt="" />
-										<h3>bird</h3>
+										<img src="{{ asset('images/').'/'.$bird['picture'] }}" alt="" />
+										<h3>{{ $bird['commonName'] }}</h3>
 									</a>
 							</div>
 							@endforeach

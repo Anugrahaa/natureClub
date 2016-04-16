@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <h1>Enter information on Birds</h1>
+    <h1 class="header">Enter information on Birds</h1>
 
     <hr>
     <div class="col-md-6">
@@ -31,7 +31,7 @@
             {!! Form::text('diet',null,['class'=>'form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::label('localBreeding','Diet:') !!}
+            {!! Form::label('localBreeding','Local Breeding:') !!}
             {!! Form::text('localBreeding',null,['class'=>'form-control']) !!}
         </div>
         <div class="form-group">

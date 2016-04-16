@@ -18,6 +18,10 @@ class BirdController extends Controller
     public function store(){
     	$input = Request::all();
     	Bird::create($input);
-    	return redirect('/');
+    	return redirect('/show');
+    }
+    public function display(){
+    	$birds = Bird::all();
+    	return view('display',compact('birds'));
     }
 }

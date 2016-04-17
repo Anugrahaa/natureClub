@@ -14,7 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/edit', 'BirdController@create');
 Route::post('/submit','BirdController@store');
 Route::get('/show','BirdController@display');
+Route::get('/birdinfo', function(){
+	return view('lala');
+});

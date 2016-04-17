@@ -33,4 +33,7 @@ class BirdController extends Controller
     	$birds = Bird::all();
     	return view('display',compact('birds'));
     }
+    public function popup($image){
+        return view('lala',compact('image'));
+    }
 }

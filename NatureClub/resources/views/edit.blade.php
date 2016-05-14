@@ -39,11 +39,20 @@
             {!! Form::text('trivia',null,['class'=>'form-control']) !!}
         </div>
         <div class="form-group">
+            {!! Form::label('hotspot','Hotspot: ') !!}
+            {!! Form::file('hotspot',null,['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('images','Images: ') !!}
+            {!! Form::file('images[]',['multiple'=>true, 'class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
             {!! Form::submit('Add Bird',['class'=>'btn btn-success form-control']) !!}
         </div>
         <div class="form-group">
            {!! Form::button('Cancel',['class'=>'btn btn-danger form-control','onclick'=>'window.location.href="/"']) !!}
         </div>
+        
     {!! Form::close() !!}
     </div>
 @stop

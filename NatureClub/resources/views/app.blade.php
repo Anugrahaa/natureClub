@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Incredible NITT</title>
 
 	<link rel="stylesheet" href="{{ asset('packages/bootstrap/css/bootstrap.min.css') }}">
 	<script type="text/javascript" href="{{ asset('packages/bootstrap/js/bootstrap.min.js') }}"></script>

@@ -53,6 +53,6 @@
            {!! Form::button('Cancel',['class'=>'btn btn-danger form-control','onclick'=>'window.location.href="/"']) !!}
         </div>
         
-    {!! Form::close() !!}
+    {!! Form::close() !!} 
     </div>
 @stop

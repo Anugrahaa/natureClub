@@ -16,8 +16,8 @@ class BirdController extends Controller
     	return view('edit');
     }
     public function store(Request $request){
-    	$input = Request::except(['picture']);
-    	
+    	$input = Request::except(['picture','images']);
+    	$cName = $input['commonName'];
         if (Request::hasFile('picture')) {
             $imageName = Request::file('picture')->getClientOriginalName();
             Request::file('picture')->move(
@@ -25,8 +25,21 @@ class BirdController extends Controller
             );
         }
 
+        if (Request::hasFile('images')) {
+            $images = Request::file('images');
+            $image_count = count($images);
+            $i = $image_count;
+            foreach ($images as $image) {
+                $mulImageName = $cName.$i;
+                $i=$i-1;
+                $image->move(
+                base_path() . '/public/otherimages/',$mulImageName
+                );
+            }
+        }
+
         Bird::create($input);
-        Bird::where('commonName', $input['commonName'])->update(['picture' => $imageName]);
+        Bird::where('commonName', $cName)->update(['picture' => $imageName, 'images' => $image_count]);
         return redirect('/show');
     }
     public function display(){

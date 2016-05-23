@@ -6,3 +6,4 @@ Homestead.json
 #.env
 ../bin
 /public/images
+/public/otherimages

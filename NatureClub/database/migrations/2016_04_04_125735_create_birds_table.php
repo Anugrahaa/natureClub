@@ -22,7 +22,7 @@ class CreateBirdsTable extends Migration
             $table->string('localBreeding');
             $table->string('trivia');
             $table->string('hotspot');
-            $table->integer('images');
+            $table->integer('images'); 
         });
     }
 

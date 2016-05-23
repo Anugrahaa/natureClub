@@ -34,7 +34,7 @@ class BirdController extends Controller
                 $i=$i-1;
                 $image->move(
                 base_path() . '/public/otherimages/',$mulImageName
-                );
+                ); 
             }
         }
 

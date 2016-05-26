@@ -43,7 +43,7 @@
             {!! Form::file('hotspot',null,['class'=>'form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::label('images','Images: ') !!}
+            {!! Form::label('images','Images: (upload only .jpg files)') !!}
             {!! Form::file('images[]',['multiple'=>true, 'class'=>'form-control']) !!}
         </div>
         <div class="form-group">
@@ -53,6 +53,7 @@
            {!! Form::button('Cancel',['class'=>'btn btn-danger form-control','onclick'=>'window.location.href="/"']) !!}
         </div>
         
-    {!! Form::close() !!} 
+    {!! Form::close() !!}
     </div>
 @stop
+

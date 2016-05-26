@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::get('/edit', 'BirdController@create');
 Route::post('/submit','BirdController@store');
 Route::get('/show','BirdController@display');
-Route::get('/birdinfo', function(){
-	return view('lala');
-});
+Route::get('/birdinfo/{name}', ['uses' => 'BirdController@popup']);
+Route::post('/error/{errormsg}', function($errormsg){
+	return view('error',compact($errormsg));
+} );

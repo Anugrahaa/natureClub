@@ -50,9 +50,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li><a href="mail.html">Contact Us</a></li>
                             </ul>
                         </nav>
+                        </div>
+                    <!-- /.navbar-collapse -->
                         <div id="wrapper">
 		<link rel="stylesheet" href="{{ asset('packages/template/assets/css/main.css') }}" />
-		
+                    		
 
 				<!-- Main -->
 					<section id="main">
@@ -61,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<section class="thumbnails">
 							@foreach($birds as $bird)
 							<div class='col-md-4'>
-									<a href="/birdinfo" data-poptrox="iframe,600x400">
+									<a href="{{ '/birdinfo/'.$bird['commonName'] }}" data-poptrox="iframe,1000x400">
 										<img src="{{ asset('images/').'/'.$bird['picture'] }}" alt="" />
 										<h3>{{ $bird['commonName'] }}</h3>
 									</a>
@@ -73,8 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</section>
 
 			</div>
-                    </div>
-                    <!-- /.navbar-collapse -->
+                    
                 </nav>
             </div>
             <!-- <div class="banner-info">
@@ -138,6 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 <!-- //footer -->
 		<!-- Scripts -->
+            <script src="{{  asset('packages/home/js/bootstrap.js') }}"></script>
 			<script src="{{ asset('packages/template/assets/js/jquery.min.js') }}"></script>
 			<script src="{{ asset('packages/template/assets/js/jquery.poptrox.min.js') }}"></script>
 			<script src="{{ asset('packages/template/assets/js/skel.min.js') }}"></script>

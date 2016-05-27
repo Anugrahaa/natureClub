@@ -25,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="banner">
         <div class="container">
             <div class="logo">
-                <a href="index.html">IncredibleNITT <span>Find Your Species</span></a>
+                <a href="/">IncredibleNITT <span>Find Your Species</span></a>
             </div>
             <div class="navigation">
                 <nav class="navbar navbar-default">

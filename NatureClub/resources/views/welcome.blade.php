@@ -30,7 +30,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="banner">
         <div class="container">
             <div class="logo">
-                <a href="index.html">IncredibleNITT <span>Find Your Species</span></a>
+                <a href="/">IncredibleNITT <span>Find Your Species</span></a>
             </div>
             <div class="navigation">
                 <nav class="navbar navbar-default">
@@ -48,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                         <nav class="cl-effect-13" id="cl-effect-13">
                             <ul class="nav navbar-nav">
-                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="/" class="active">Home</a></li>
                                 <li><a href="/show">Birds</a></li>
                                 <li><a href="short-codes.html">Events</a></li>
                                 <li><a href="services.html">Our Team</a></li>

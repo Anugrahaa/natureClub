@@ -10,6 +10,8 @@
 	function changepic(i)
 	{	if(i==0) 
 			var x = "{{ asset('images/').'/'.$bird['picture'] }}";
+		else if(i==-1)
+			var x = "{{ asset('hotspot/').'/'.$bird['hotspot'] }}";
 		else
 			var x = "{{ asset('otherimages/').'/'.$bird['commonName'] }}"+i+".jpg";
 		// alert(x);
@@ -50,8 +52,13 @@
 		<td>Trivia:</td>
 		<td>{{ $bird['trivia'] }}</td>
 	</tr>
+	<tr>
+		<td>Hotspot:</td>
+		<td><div class="imgs" onclick="changepic(-1);">
+		<img src="{{ asset('hotspot/').'/'.$bird['hotspot'] }}" height="100" width="120"/ >
+	</div></td>
+	</tr>
 </table>
-	
 	@for($i=1; $i<=$bird['images']; $i++)
 	<div class="imgs" onclick="changepic({{$i}});">
 		<img src="{{ asset('otherimages/').'/'.$bird['commonName'].$i.'.jpg' }}" height="100" width="120"/ >

@@ -12,11 +12,11 @@
         </div>
         <div class="form-group">
             {!! Form::label('commonName','Common Name:') !!}
-            {!! Form::text('commonName',null,['class'=>'form-control']) !!}
+            {!! Form::text('commonName',null,['class'=>'form-control', 'required'=>true]) !!}
         </div>
         <div class="form-group">
             {!! Form::label('scientificName','Scientific Name:') !!}
-            {!! Form::text('scientificName',null,['class'=>'form-control']) !!}
+            {!! Form::text('scientificName',null,['class'=>'form-control', 'required'=>true]) !!}
         </div>
         <div class="form-group">
             {!! Form::label('localStatus','Local Status:') !!}

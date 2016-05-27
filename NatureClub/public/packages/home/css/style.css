@@ -126,9 +126,12 @@ li.dropdown {
     text-decoration: none;
     display: block;
     text-align: left;
+    transition:background-color .5s;
+	-webkit-transition:background-color .5s;
+	-moz-transition:background-color .5s;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {background-color: #bfbfbf;}
 
 .dropdown:hover .dropdown-content {
     visibility: visible;

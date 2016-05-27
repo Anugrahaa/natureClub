@@ -49,10 +49,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <nav class="cl-effect-13" id="cl-effect-13">
                             <ul class="nav navbar-nav">
                                 <li><a href="/" class="active">Home</a></li>
-                                <li><a href="/show">Birds</a></li>
-                                <li><a href="short-codes.html">Events</a></li>
-                                <li><a href="services.html">Our Team</a></li>
-                                <li><a href="mail.html">Contact Us</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropbtn">Species</a>
+                                    <div class="dropdown-content">
+                                        <a href="/show">Birds</a>
+                                        <a href="#">Butterflies</a>
+                                        <a href="#">Reptiles and others</a>
+                                        <a href="#">Flora</a>
+                                    </div>
+                                </li>
+                                <li><a href="">Events</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="">Photo of the month</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropbtn">Useful info</a>
+                                    <div class="dropdown-content">
+                                        <a href="#">Bird Watching</a>
+                                        <a href="#">Facts about Snakes</a>
+                                        <a href="#">Interesting Links</a>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -142,7 +158,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                      });
                     </script>
                     <script type="text/javascript" src="{{  asset('packages/home/js/jquery.flexisel.js') }}"></script>
+
+
             </div>
+
+
+
+
+
+
+
             <div class="banner-bottom-grids">
                 <div class="col-md-6 banner-bottom-grid-left">
                     <figure class="effect-lexi">

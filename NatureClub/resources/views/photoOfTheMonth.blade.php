@@ -18,13 +18,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
-
+<style type="text/css">
+</style>
 </head>
-    
+
 <body>
 <!-- bannner -->
 <!-- Wrapper -->
-    <div class="banner">
+    <div class="banner-photo">
         <div class="container">
             <div class="logo">
                 <a href="/">IncredibleNITT <span>Find Your Species</span></a>
@@ -70,42 +71,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </nav>
                     </div>
                     <!-- /.navbar-collapse -->
-                
-                        <div id="wrapper">
-		<link rel="stylesheet" href="{{ asset('packages/template/assets/css/main.css') }}" />
-                    		
-
-				<!-- Main -->
-					<section id="main">
-
-						<!-- Thumbnails -->
-							<section class="thumbnails">
-							@foreach($birds as $bird)
-							<div class='col-md-4'>
-									<a href="{{ '/birdinfo/'.$bird['commonName'] }}" data-poptrox="iframe,1000x400">
-										<img src="{{ asset('images/').'/'.$bird['picture'] }}" alt="" />
-										<h3>{{ $bird['commonName'] }}</h3>
-									</a>
-							</div>
-							@endforeach
-							
-							</section>
-
-					</section>
-
-			</div>
-                    
-            </nav>
+                </nav>
+                    <!-- /.navbar-collapse -->
+                    <div id="wrapper" style="background-color:white; color:black; font-family: 'Slabo 27px', serif; font-size:1rem; line-height:1.5rem;">
+		              <!-- <link rel="stylesheet" href="{{ asset('packages/template/assets/css/main.css') }}" /> -->
+                    	<div id="photo-of-the-month" style="padding:1rem;">
+                            Photo of the month 
+                        </div>
+                        <div id="caption" style="padding:1rem; font-size:1.5rem; font-weight:bold;">
+                            {{$photo['caption']}} 
+                        </div>
+                        <div style="width:100%;height:60%; border-bottom:1px solid black; padding:0.5rem;">
+                            <img src="{{ asset('PhotoOfTheMonth').'/'.$photo['photo'] }}" style="width:100%; height:100%;" />
+                        </div>
+                    <div id="photo-content" >
+                        <div id="date" class="col-md-6"  style="padding-bottom:1rem;"></div>
+                        <div id="photo-by" class="col-md-6" style="text-align:right; padding-bottom:1rem;">Photo by: {!!$photo['photo-by']!!}</div>
+                        
+                        <div id="desc" class="col-md-12" style="padding-bottom:1rem;">{!!html_entity_decode($photo['description'])!!}</div>                    
+                    </div>  
+                    </div>
+                               
             </div>
-            <!-- <div class="banner-info">
-                <h1>The Largest Selection Of <span>Apartments</span></h1>
-                <p>most the best investment of your money.</p>
-            </div> -->
         </div>
     </div>
 <!-- //bannner -->
 <!-- Wrapper -->
-			
+            
 <!-- footer -->
     <div class="footer">
         <div class="container">
@@ -157,11 +149,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 <!-- //footer -->
-		<!-- Scripts -->
+    <script type="text/javascript">
+            function x()
+            {
+                var mon = {!! $photo['month'] !!};
+                var month = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+                document.getElementById('date').innerHTML=month[mon-1]+" "+{!! $photo['year'] !!}; 
+                //alert($("#date").html());
+            }
+            x();
+    </script>
+        <!-- Scripts -->
             <script src="{{  asset('packages/home/js/bootstrap.js') }}"></script>
-			<script src="{{ asset('packages/template/assets/js/jquery.min.js') }}"></script>
-			<script src="{{ asset('packages/template/assets/js/jquery.poptrox.min.js') }}"></script>
-			<script src="{{ asset('packages/template/assets/js/skel.min.js') }}"></script>
-			<script src="{{ asset('packages/template/assets/js/main.js') }}"></script>
+            <script src="{{ asset('packages/template/assets/js/jquery.min.js') }}"></script>
+            <script src="{{ asset('packages/template/assets/js/jquery.poptrox.min.js') }}"></script>
+            <script src="{{ asset('packages/template/assets/js/skel.min.js') }}"></script>
+            <script src="{{ asset('packages/template/assets/js/main.js') }}"></script>
 </body>
 </html>

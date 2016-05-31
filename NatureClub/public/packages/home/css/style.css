@@ -32,7 +32,16 @@ body a:hover{
 	-o-background-size:cover;
 	-ms-background-size:cover;
 	min-height:800px;
+	font-family: 'Slabo 27px', serif;
 }
+.banner-photo {
+		background: white; /* For browsers that do not support gradients */
+    	background: -webkit-linear-gradient(black,white, white); /* For Safari 5.1 to 6.0 */
+    	background: -o-linear-gradient(black,white, white); /* For Opera 11.1 to 12.0 */
+    	background: -moz-linear-gradient(black,white, white); /* For Firefox 3.6 to 15 */
+    	background: linear-gradient(black,white, white); /* Standard syntax */
+    	font-family: 'Slabo 27px', serif;
+	}
 #wrapper{
 	background: rgba(0, 0, 0, 0.9);
 }
@@ -1199,7 +1208,7 @@ h2.typoh2{
 	}
 }
 @media (max-width:480px){
-	.banner {
+	.banner,.banner-photo {
 		min-height: 405px;
 	}
 	.table h1 {
@@ -1845,7 +1854,7 @@ p.admin{
 /*-- //single --*/
 /*-----start-responsive-design------*/
 @media (max-width:1366px){
-	.banner {
+	.banner,.banner-photo {
 		min-height: 750px;
 	}
 }
@@ -1861,7 +1870,7 @@ p.admin{
 	.navbar-nav > li > a {
 		padding: 10px 40px;
 	}
-	.banner {
+	.banner,.banner-photo {
 		min-height: 685px;
 	}
 	.banner-bottom, .team, .news, .typo, .services, .mail, .blog, .single,.testimonials {
@@ -1964,7 +1973,7 @@ p.admin{
 	.banner-info h1 {
 		font-size: 2em;
 	}
-	.banner {
+	.banner,.banner-photo {
 		min-height: 640px;
 	}
 	.banner-bottom h2 {
@@ -2086,7 +2095,7 @@ p.admin{
 		width: 55%;
 		margin: 8em 0 0;
 	}
-	.banner {
+	.banner,.banner-photo {
 		min-height: 520px;
 	}
 	.banner-bottom h2 {
@@ -2180,6 +2189,13 @@ p.admin{
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		-ms-background-size: cover;
+	}
+	.banner-photo {
+		background: white; /* For browsers that do not support gradients */
+    	background: -webkit-linear-gradient(black,white, white); /* For Safari 5.1 to 6.0 */
+    	background: -o-linear-gradient(black,white, white); /* For Opera 11.1 to 12.0 */
+    	background: -moz-linear-gradient(black,white, white); /* For Firefox 3.6 to 15 */
+    	background: linear-gradient(black,white, white); /* Standard syntax */
 	}
 	.banner-bottom h2:after {
 		right: 0%;
@@ -2339,7 +2355,7 @@ p.admin{
 		margin: 1em 0 0;
 		padding: 1em 0 0;
 	}
-	.banner {
+	.banner,.banner-photo {
 		min-height: 395px;
 	}
 	.banner-bottom h2 {
@@ -2630,7 +2646,7 @@ p.admin{
 		width: 90%;
 		margin: 4em 0 0;
 	}
-	.banner {
+	.banner,.banner-photo {
 		min-height: 325px;
 	}
 	.item p,.banner-bottom-grid-right p,.services-grid-left1 ul li a,.testimonials-grid-pos-right p,.news-grid p,p.dolore,.banner-bottom1-left1 p,.footer-grid-left p,.news-grid h4{

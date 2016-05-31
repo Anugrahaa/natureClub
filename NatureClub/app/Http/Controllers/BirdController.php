@@ -12,9 +12,6 @@ use App\Bird;
 
 class BirdController extends Controller
 {
-    public function create(){
-    	return view('edit');
-    }
     public function store(Request $request){
     	$input = Request::except(['picture','hotspot','images']);
         if(!$input['commonName']||!$input['scientificName'])

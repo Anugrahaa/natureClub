@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </li>
                                 <li><a href="">Events</a></li>
                                 <li><a href="">Blog</a></li>
-                                <li><a href="">Photo of the month</a></li>
+                                <li><a href="/photo-of-the-month">Photo of the month</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropbtn">Useful info</a>
                                     <div class="dropdown-content">

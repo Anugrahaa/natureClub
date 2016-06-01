@@ -78,8 +78,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     	<div id="photo-of-the-month" style="padding:1rem;">
                             Photo of the month 
                         </div>
-                        <div id="caption" style="padding:1rem; font-size:1.5rem; font-weight:bold;">
+                        <div id="caption" class="col-md-6" style="padding:1rem; font-size:1.5rem; font-weight:bold;">
                             {{$photo['caption']}} 
+                        </div>
+                        <div class="col-md-6" style="text-align:right;padding:1rem;">
+                            <span style="cursor:pointer;" onclick="prev()">Previous</span>
+                            <span>&nbsp;&nbsp;</span>
+                            <span style="cursor:pointer;" onclick="next()">Next</span>
                         </div>
                         <div style="width:100%;height:60%; border-bottom:1px solid black; padding:0.5rem;">
                             <img src="{{ asset('PhotoOfTheMonth').'/'.$photo['photo'] }}" style="width:100%; height:100%;" />
@@ -158,7 +163,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 document.getElementById('date').innerHTML=month[mon-1]+" "+{!! $photo['year'] !!}; 
                 //alert($("#date").html());
             }
-            x();
+            window.onload = x();
+
+            function prev () {
+                var mon = {!! $photo['month'] !!};
+                var yr = {!! $photo['year'] !!};
+                if(yr==16)
+                {
+                    if(mon==1) 
+                        window.location = '/photo-of-the-month/16/1';
+                    else mon--;
+                }
+                else if(mon==1 && yr>16) 
+                {
+                    yr--;
+                    mon=12;
+                }
+                else
+                {
+                    mon--;
+                }
+                window.location = '/photo-of-the-month/'+yr+'/'+mon;
+            }
+            function next () {
+                var mon = {!! $photo['month'] !!};
+                var yr = {!! $photo['year'] !!};
+                if(mon==12)
+                {
+                    mon=1;
+                    yr++;
+                }
+                else
+                {
+                    mon++;
+                }
+                window.location = '/photo-of-the-month/'+yr+'/'+mon;
+            }
     </script>
         <!-- Scripts -->
             <script src="{{  asset('packages/home/js/bootstrap.js') }}"></script>

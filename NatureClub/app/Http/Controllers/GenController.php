@@ -29,6 +29,8 @@ class GenController extends Controller
     }
 
     public function showPhoto($year,$month){
+        $m = $month;
+        $y = $year;
         while(true)
         {
             $photo = PhotoOfTheMonth::where(['month'=>$month, 'year'=>$year])->first();
@@ -47,7 +49,8 @@ class GenController extends Controller
                 }
             }
 
-            else break;
+            else if($m==$month&&$y==$year) break;
+            else return redirect('/photo-of-the-month/'.$year.'/'.$month);
 
         }
 

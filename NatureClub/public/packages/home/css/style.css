@@ -127,6 +127,7 @@ li.dropdown {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
+    z-index: 100;
 }
 
 .dropdown-content a {

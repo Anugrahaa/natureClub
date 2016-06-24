@@ -14,16 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/edit', function () {
-	return view('edit');
+Route::get('/birds/edit', function () {
+	return view('birds/edit');
 });
-Route::post('/submit','BirdController@store');
-Route::get('/show','BirdController@display');
+Route::post('/birds/submit','BirdController@store');
+Route::get('/birds/show','BirdController@display');
 Route::get('/birdinfo/{name}', ['uses' => 'BirdController@popup']);
 
 Route::get('/photo-of-the-month', 'GenController@photoOfTheMonth');
 Route::get('/photo-of-the-month/edit', function () {
 	return view('editphoto');
+});
+Route::get('/error', function() {
+	return view('errors/503');
 });
 Route::post('/submit-photo', 'GenController@submitPhoto');
 Route::get('/photo-of-the-month/{year}/{month}', ['uses' => 'GenController@showPhoto']);

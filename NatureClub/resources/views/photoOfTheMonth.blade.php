@@ -82,9 +82,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             {{$photo['caption']}} 
                         </div>
                         <div class="col-md-6" style="text-align:right;padding:1rem;">
-                            <span style="cursor:pointer;" onclick="prev()">Previous</span>
+                            <span style="cursor:pointer;text-decoration:underline;" onclick="prev()">Previous</span>
                             <span>&nbsp;&nbsp;</span>
-                            <span style="cursor:pointer;" onclick="next()">Next</span>
+                            <span style="cursor:pointer;text-decoration:underline;" onclick="next()">Next</span>
                         </div>
                         <div style="width:100%;height:60%; border-bottom:1px solid black; padding:0.5rem;">
                             <img src="{{ asset('PhotoOfTheMonth').'/'.$photo['photo'] }}" style="width:100%; height:100%;" />

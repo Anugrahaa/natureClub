@@ -4,17 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Bird extends Model
+class Flora extends Model
 {
     protected $fillable = [
     'commonName',
     'scientificName',
     'localStatus',
-    'generalDescription',
-    'diet',
-    'localBreeding',
+    'abundance',
     'trivia'
     ];
-
+    
     public $timestamps = false;
 }

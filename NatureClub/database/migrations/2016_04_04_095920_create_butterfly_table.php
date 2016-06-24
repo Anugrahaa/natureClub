@@ -12,7 +12,7 @@ class CreateButterflyTable extends Migration
      */
     public function up()
     {
-        Schema::create('butterfly', function (Blueprint $table) {
+        Schema::create('butterflys', function (Blueprint $table) {
             $table->increments('id');
             $table->string('picture');
             $table->string('commonName');
@@ -23,7 +23,7 @@ class CreateButterflyTable extends Migration
             $table->string('lifeCycle');
             $table->string('trivia');
             $table->string('hotspot');
-            $table->timestamps();
+            $table->integer('images'); 
         });
     }
 
@@ -34,6 +34,6 @@ class CreateButterflyTable extends Migration
      */
     public function down()
     {
-        Schema::drop('butterfly');
+        Schema::drop('butterflys');
     }
 }

@@ -13,6 +13,7 @@ class CreateBirdsTable extends Migration
     public function up()
     {
         Schema::create('birds', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('picture');
             $table->string('commonName');
             $table->string('scientificName');

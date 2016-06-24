@@ -12,7 +12,7 @@ class CreateSnakesTable extends Migration
      */
     public function up()
     {
-        Schema::create('snakes', function (Blueprint $table) {
+        Schema::create('reptiles', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -25,6 +25,6 @@ class CreateSnakesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('snakes');
+        Schema::drop('reptiles');
     }
 }

@@ -12,15 +12,15 @@ class CreateFloraTable extends Migration
      */
     public function up()
     {
-        Schema::create('flora', function (Blueprint $table) {
+        Schema::create('floras', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Picture');
-            $table->string('Common Name');
-            $table->string('Scientific Name');
-            $table->string('Abundance');
-            $table->string('Trivia');
-            $table->string('Hotspot');
-            $table->timestamps();
+            $table->string('picture');
+            $table->string('commonName');
+            $table->string('scientificName');
+            $table->string('abundance');
+            $table->string('trivia');
+            $table->string('hotspot');
+            $table->integer('images'); 
         });
     }
 
@@ -31,6 +31,6 @@ class CreateFloraTable extends Migration
      */
     public function down()
     {
-        Schema::drop('flora');
+        Schema::drop('floras');
     }
 }

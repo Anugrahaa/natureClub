@@ -4,17 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Bird extends Model
+class Butterfly extends Model
 {
     protected $fillable = [
     'commonName',
     'scientificName',
     'localStatus',
     'generalDescription',
-    'diet',
-    'localBreeding',
+    'hostPlants',
+    'lifeCycle',
     'trivia'
     ];
-
+    
     public $timestamps = false;
 }

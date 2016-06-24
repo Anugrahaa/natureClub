@@ -45,11 +45,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                         <nav class="cl-effect-13" id="cl-effect-13">
                             <ul class="nav navbar-nav">
-                                <li><a href="/" class="active">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropbtn">Species</a>
+                                    <a href="#" class="active dropbtn">Species</a>
                                     <div class="dropdown-content">
-                                        <a href="/show">Birds</a>
+                                        <a href="/birds/show">Birds</a>
                                         <a href="#">Butterflies</a>
                                         <a href="#">Reptiles and others</a>
                                         <a href="#">Flora</a>

@@ -9,18 +9,18 @@
 <script type="text/javascript">
 	function changepic(i)
 	{	if(i==0) 
-			var x = "{{ asset('images/').'/'.$bird['picture'] }}";
+			var x = "{{ asset('birdimages/').'/'.$bird['picture'] }}";
 		else if(i==-1)
-			var x = "{{ asset('hotspot/').'/'.$bird['hotspot'] }}";
+			var x = "{{ asset('birdhotspot/').'/'.$bird['hotspot'] }}";
 		else
-			var x = "{{ asset('otherimages/').'/'.$bird['commonName'] }}"+i+".jpg";
+			var x = "{{ asset('otherbirdimages/').'/'.$bird['commonName'] }}"+i+".jpg";
 		// alert(x);
 		$("#bigpic img").attr('src',x);
 	}
 </script>
 <div style="width:100%;height:100%">
 	<div id="bigpic" class="col-sm-5">
-	<img src="{{ asset('images/').'/'.$bird['picture'] }}" style="width:100%;height:100%;">
+	<img src="{{ asset('birdimages/').'/'.$bird['picture'] }}" style="width:100%;height:100%;">
 </div>
 <div class="col-sm-6">
 	<table>
@@ -55,17 +55,17 @@
 	<tr>
 		<td>Hotspot:</td>
 		<td><div class="imgs" onclick="changepic(-1);">
-		<img src="{{ asset('hotspot/').'/'.$bird['hotspot'] }}" height="100" width="120"/ >
+		<img src="{{ asset('birdhotspot/').'/'.$bird['hotspot'] }}" height="100" width="120"/ >
 	</div></td>
 	</tr>
 </table>
 	@for($i=1; $i<=$bird['images']; $i++)
 	<div class="imgs" onclick="changepic({{$i}});">
-		<img src="{{ asset('otherimages/').'/'.$bird['commonName'].$i.'.jpg' }}" height="100" width="120"/ >
+		<img src="{{ asset('otherbirdimages/').'/'.$bird['commonName'].$i.'.jpg' }}" height="100" width="120"/ >
 	</div>
 	@endfor
 	<div class="imgs" onclick="changepic(0);">
-		<img src="{{ asset('images/').'/'.$bird['picture'] }}" height="100" width="120"/ >
+		<img src="{{ asset('birdimages/').'/'.$bird['picture'] }}" height="100" width="120"/ >
 	</div>
 </div>
 </div>

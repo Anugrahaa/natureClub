@@ -50,9 +50,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <a href="#" class="active dropbtn">Species</a>
                                     <div class="dropdown-content">
                                         <a href="/birds/show">Birds</a>
-                                        <a href="#">Butterflies</a>
+                                        <a href="/butterfly/show">Butterflies</a>
                                         <a href="#">Reptiles and others</a>
-                                        <a href="#">Flora</a>
+                                        <a href="/flora/show">Flora</a>
                                     </div>
                                 </li>
                                 <li><a href="">Events</a></li>
@@ -83,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							@foreach($birds as $bird)
 							<div class='col-md-4'>
 									<a href="{{ '/birdinfo/'.$bird['commonName'] }}" data-poptrox="iframe,1000x400">
-										<img src="{{ asset('images/').'/'.$bird['picture'] }}" alt="" />
+										<img src="{{ asset('birdimages/').'/'.$bird['picture'] }}" alt="" />
 										<h3>{{ $bird['commonName'] }}</h3>
 									</a>
 							</div>

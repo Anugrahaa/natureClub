@@ -9,7 +9,6 @@ class Flora extends Model
     protected $fillable = [
     'commonName',
     'scientificName',
-    'localStatus',
     'abundance',
     'trivia'
     ];

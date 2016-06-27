@@ -5,7 +5,13 @@ Homestead.yaml
 Homestead.json
 #.env
 ../bin
-/public/images
-/public/otherimages
-/public/hotspot
+/public/birdimages
+/public/otherbirdimages
+/public/birdhotspot
+/public/floraimages
+/public/otherfloraimages
+/public/florahotspot
+/public/butterflyimages
+/public/otherbutterflyimages
+/public/butterflyhotspot
 /public/PhotoOfTheMonth

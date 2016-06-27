@@ -53,9 +53,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <a href="#" class="dropbtn">Species</a>
                                     <div class="dropdown-content">
                                         <a href="/birds/show">Birds</a>
-                                        <a href="#">Butterflies</a>
+                                        <a href="/butterfly/show">Butterflies</a>
                                         <a href="#">Reptiles and others</a>
-                                        <a href="#">Flora</a>
+                                        <a href="/flora/show">Flora</a>
                                     </div>
                                 </li>
                                 <li><a href="">Events</a></li>

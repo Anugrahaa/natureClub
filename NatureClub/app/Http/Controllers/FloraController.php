@@ -8,9 +8,9 @@ use App\Http\Requests;
 
 use Request;
 
-use App\Bird;
+use App\Flora;
 
-class BirdController extends Controller
+class FloraController extends Controller
 {
     public function store(Request $request){
         $can_save=1;
@@ -39,14 +39,14 @@ class BirdController extends Controller
                 $mulImageName = $cName.$i.'.'.$mulImageExt;
                 $i=$i-1;
                 $image->move(
-                base_path() . '/public/otherbirdimages/',$mulImageName
+                base_path() . '/public/otherfloraimages/',$mulImageName
                 ); 
             }
         }
         if (Request::hasFile('picture')) {
             $imageName = Request::file('picture')->getClientOriginalName();
             Request::file('picture')->move(
-                base_path() . '/public/birdimages/',$imageName
+                base_path() . '/public/floraimages/',$imageName
             );
         }
         else {   
@@ -58,7 +58,7 @@ class BirdController extends Controller
         if (Request::hasFile('hotspot')) {
             $hotspotpic = Request::file('hotspot')->getClientOriginalName();
             Request::file('hotspot')->move(
-                base_path() . '/public/birdhotspot/',$hotspotpic
+                base_path() . '/public/florahotspot/',$hotspotpic
             );
         }
         else{
@@ -66,18 +66,18 @@ class BirdController extends Controller
         }
         if($can_save==1)
         {
-            Bird::create($input);
-            Bird::where('commonName', $cName)->update(['picture' => $imageName,'hotspot' => $hotspotpic, 'images' => $image_count]);
+            Flora::create($input);
+            Flora::where('commonName', $cName)->update(['picture' => $imageName,'hotspot' => $hotspotpic, 'images' => $image_count]);
             
-            return redirect('/birds/show');
+            return redirect('/flora/show');
         }
     }
     public function display(){
-    	$birds = Bird::all();
-    	return view('birds/display',compact('birds'));
+    	$floras = Flora::all();
+    	return view('flora/display',compact('floras'));
     }
     public function popup($name){
-        $bird = Bird::where('commonName', $name)->get()[0];
-        return view('birds/quickview',compact('bird'));
+        $flora = Flora::where('commonName', $name)->get()[0];
+        return view('flora/quickview',compact('flora'));
     }
 }

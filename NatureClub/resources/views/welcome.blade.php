@@ -23,6 +23,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+
 </head>
     
 <body>
@@ -58,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <a href="/flora/show">Flora</a>
                                     </div>
                                 </li>
-                                <li><a href="">Events</a></li>
+                                <li><a href="/events">Events</a></li>
                                 <li><a href="">Blog</a></li>
                                 <li><a href="/photo-of-the-month">Photo of the month</a></li>
                                 <li class="dropdown">

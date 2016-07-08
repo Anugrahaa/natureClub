@@ -56,9 +56,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <a href="#">Flora</a>
                                     </div>
                                 </li>
-                                <li><a href="/events">Events</a></li>
+                                <li><a href="" class="active">Events</a></li>
                                 <li><a href="">Blog</a></li>
-                                <li><a href="/photo-of-the-month" class="active">Photo of the month</a></li>
+                                <li><a href="/photo-of-the-month">Photo of the month</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropbtn">Useful info</a>
                                     <div class="dropdown-content">
@@ -73,36 +73,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- /.navbar-collapse -->
                 </nav>
                     <!-- /.navbar-collapse -->
-                    <div id="wrapper" style="background-color:white; color:black; font-family: 'Slabo 27px', serif; font-size:1rem; line-height:1.5rem;">
-		              <!-- <link rel="stylesheet" href="{{ asset('packages/template/assets/css/main.css') }}" /> -->
-                    	<div id="photo-of-the-month" style="padding:1rem;">
-                            Photo of the month 
+
+<div class="news">
+        <div class="container">
+            <h3><span>Events</h3>
+            
+            <div class="news-grids">
+                @foreach($events as $event)
+                <div class="col-md-4 news-grid">
+                    <div class="news-grid1" style="padding:15px;">
+                        <div class="news-grid1-sub">
+                            <h4><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                {{ $event['date'] }}</h4>
+                            <h5>{{ $event['eventName'] }}</h5>
+                            
                         </div>
-                        <div id="caption" class="col-md-6" style="padding:1rem; font-size:1.5rem; font-weight:bold;">
-                            {{$photo['caption']}} 
-                        </div>
-                        <div class="col-md-6" style="text-align:right;padding:1rem;">
-                            <span style="cursor:pointer;text-decoration:underline;" onclick="prev()">Previous</span>
-                            <span>&nbsp;&nbsp;</span>
-                            <span style="cursor:pointer;text-decoration:underline;" onclick="next()">Next</span>
-                        </div>
-                        <div style="width:100%;height:60%; border-bottom:1px solid black; padding:0.5rem;">
-                            <img src="{{ asset('PhotoOfTheMonth').'/'.$photo['photo'] }}" style="width:100%; height:100%;" />
-                        </div>
-                    <div id="photo-content" >
-                        <div id="date" class="col-md-6"  style="padding-bottom:1rem;"></div>
-                        <div id="photo-by" class="col-md-6" style="text-align:right; padding-bottom:1rem;">Photo by: {!!$photo['photo-by']!!}</div>
-                        
-                        <div id="desc" class="col-md-12" style="padding-bottom:1rem;">{!!html_entity_decode($photo['description'])!!}</div>                    
-                    </div>  
+                        <img src="images/10.jpg" alt=" " class="img-responsive" />
+                        <ul>
+                            <li style="position:absolute; right:45px; font-size:15px;"><a href="{{ '/eventinfo/'.$event['eventName'] }}" data-poptrox="iframe,1000x400">Read More<i class="glyphicon glyphicon-share" aria-hidden="true"></i></a></li>
+                            <div class="cleafix"> </div>
+                        </ul>
                     </div>
-                               
+                </div>
+                @endforeach
+                 <div class="clearfix"> </div>
             </div>
         </div>
     </div>
-<!-- //bannner -->
-<!-- Wrapper -->
-            
+    <div class="testimonials">
+        <div class="container">
+            <h3><span>News</h3>
+            <p class="dolore">Consectetur adipiscing elit, sed do 
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
+                minim veniam.</p>
+        </div>
+    </div>
+
 <!-- footer -->
     <div class="footer">
         <div class="container">
@@ -154,53 +160,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 <!-- //footer -->
-    <script type="text/javascript">
-            function x()
-            {
-                var mon = {!! $photo['month'] !!};
-                var month = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
-                document.getElementById('date').innerHTML=month[mon-1]+" "+{!! $photo['year'] !!}; 
-                //alert($("#date").html());
-            }
-            window.onload = x();
-
-            function prev () {
-                var mon = {!! $photo['month'] !!};
-                var yr = {!! $photo['year'] !!};
-                if(yr==16)
-                {
-                    if(mon==1) 
-                        window.location = '/photo-of-the-month/16/1';
-                    else mon--;
-                }
-                else if(mon==1 && yr>16) 
-                {
-                    yr--;
-                    mon=12;
-                }
-                else
-                {
-                    mon--;
-                }
-                window.location = '/photo-of-the-month/'+yr+'/'+mon;
-            }
-            function next () {
-                var mon = {!! $photo['month'] !!};
-                var yr = {!! $photo['year'] !!};
-                if(mon==12)
-                {
-                    mon=1;
-                    yr++;
-                }
-                else
-                {
-                    mon++;
-                }
-                window.location = '/photo-of-the-month/'+yr+'/'+mon;
-            }
-    </script>
-        <!-- Scripts -->
+<!-- Scripts -->
             <script src="{{  asset('packages/home/js/bootstrap.js') }}"></script>
             <script src="{{ asset('packages/template/assets/js/jquery.min.js') }}"></script>
             <script src="{{ asset('packages/template/assets/js/jquery.poptrox.min.js') }}"></script>

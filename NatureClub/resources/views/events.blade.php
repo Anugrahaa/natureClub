@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <title>IncredibleNITT| Home</title>
 <!-- for-mobile-apps -->
@@ -79,23 +79,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h3><span>Events</h3>
             
             <div class="news-grids">
-                @foreach($events as $event)
-                <div class="col-md-4 news-grid">
-                    <div class="news-grid1" style="padding:15px;">
-                        <div class="news-grid1-sub">
-                            <h4><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                                {{ $event['date'] }}</h4>
-                            <h5>{{ $event['eventName'] }}</h5>
-                            
+                <section class="main">
+                    <section class = "thumbnails">
+                        @foreach($events as $event)
+                        <div class="col-md-4 news-grid">
+                            <div class="news-grid1" style="padding:15px;">
+                                <div class="news-grid1-sub">
+                                    <h4><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                        {{ $event['date'] }}</h4>
+                                    <h5>{{ $event['eventName'] }}</h5>
+                                    
+                                </div>
+                                <img src="images/10.jpg" alt=" " class="img-responsive" />
+                                <ul>
+                                    <li style="position:absolute; right:45px; font-size:15px;"><a href="{{ '/eventinfo/'.$event['eventName'] }}" data-poptrox="iframe,1000x400">Read More<i class="glyphicon glyphicon-share" aria-hidden="true"></i></a></li>
+                                    <div class="cleafix"> </div>
+                                </ul>
+                            </div>
                         </div>
-                        <img src="images/10.jpg" alt=" " class="img-responsive" />
-                        <ul>
-                            <li style="position:absolute; right:45px; font-size:15px;"><a href="{{ '/eventinfo/'.$event['eventName'] }}" data-poptrox="iframe,1000x400">Read More<i class="glyphicon glyphicon-share" aria-hidden="true"></i></a></li>
-                            <div class="cleafix"> </div>
-                        </ul>
-                    </div>
-                </div>
-                @endforeach
+                        @endforeach
+                        </section>
+                    </section>
                  <div class="clearfix"> </div>
             </div>
         </div>

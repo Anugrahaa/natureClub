@@ -46,3 +46,10 @@ Route::get('/photo-of-the-month/edit', function () {
 
 Route::post('/submit-photo', 'GenController@submitPhoto');
 Route::get('/photo-of-the-month/{year}/{month}', ['uses' => 'GenController@showPhoto']);
+
+Route::get('/events', 'EventsController@display');
+Route::get('/events/edit', function () {
+	return view('editEvents');
+});
+Route::post('/events/submit','EventsController@storeEvent');
+Route::get('/eventinfo/{name}', ['uses' => 'EventsController@quickview']);

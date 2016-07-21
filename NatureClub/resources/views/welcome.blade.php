@@ -23,6 +23,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+
 </head>
     
 <body>
@@ -30,7 +32,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="banner">
         <div class="container">
             <div class="logo">
-                <a href="/">IncredibleNITT <span>Find Your Species</span></a>
+                <a href="/">IncredibleNITT <span>Discover Nature</span></a>
             </div>
             <div class="navigation">
                 <nav class="navbar navbar-default">
@@ -58,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <a href="/flora/show">Flora</a>
                                     </div>
                                 </li>
-                                <li><a href="">Events</a></li>
+                                <li><a href="/events">Events</a></li>
                                 <li><a href="">Blog</a></li>
                                 <li><a href="/photo-of-the-month">Photo of the month</a></li>
                                 <li class="dropdown">
@@ -171,15 +173,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="banner-bottom-grids">
                 <div class="col-md-6 banner-bottom-grid-left">
                     <figure class="effect-lexi">
-                        <img src="{{  asset('packages/home/images/1.jpg') }}" alt="" class="img-responsive" />
+                        <img src="{{  asset('packages/home/images/1.jpeg') }}" alt="" class="img-responsive" />
                         <figcaption>
-                            <h3>Altruistic <span>Lexi</span></h3>
-                            <p>Each and every friend is special. Lexi won't hide a single cookie.</p>
+                            <h3>Incredible <span> NITT </span></h3>
+                            <p>Discover nature</p>
                         </figcaption>           
                     </figure>
                 </div>
                 <div class="col-md-6 banner-bottom-grid-right">
-                    <h3>Better ways to create <span>real estate</span></h3>
+                    <h3>About Us</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
                     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -197,145 +199,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 <!-- //banner-bottom -->
 <!-- team -->
-    <div class="team">
-        <div class="container">
-            <h3>Meet Our <span>Team</span></h3>
-            <p class="dolore">Consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
-                minim veniam.</p>
-            <div class="team-grids">
-                <div class="col-md-3 team-grid">
-                    <figure class="thumb">
-                        <img src="{{ asset('packages/home/images/4.jpg') }}" alt=" " class="img-responsive" />
-                        <figcaption class="caption">
-                            <h3><a href="team.html">Andrew Bruise</a></h3>
-                            <span>Inventor</span>
-                            <div class="footer-bottom-right social"> 
-                                <ul>
-                                    <li><a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></li>
-                                    <li><a href="#" class="icon-button google"><i class="icon-google"></i><span></span></a></li>
-                                    <li><a href="#" class="icon-button v"><i class="icon-v"></i><span></span></a></li>
-                                </ul>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-3 team-grid">
-                    <figure class="thumb">
-                        <img src="{{  asset('packages/home/images/3.jpg') }}" alt=" " class="img-responsive" />
-                        <figcaption class="caption">
-                            <h3><a href="team.html">Adam Smith</a></h3>
-                            <span>Inventor</span>
-                            <div class="footer-bottom-right social"> 
-                                <ul>
-                                    <li><a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></li>
-                                    <li><a href="#" class="icon-button google"><i class="icon-google"></i><span></span></a></li>
-                                    <li><a href="#" class="icon-button v"><i class="icon-v"></i><span></span></a></li>
-                                </ul>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-3 team-grid">
-                    <figure class="thumb">
-                        <img src="{{  asset('packages/home/images/5.jpg') }}" alt=" " class="img-responsive" />
-                        <figcaption class="caption">
-                            <h3><a href="team.html">Christ Richard</a></h3>
-                            <span>Inventor</span>
-                            <div class="footer-bottom-right social"> 
-                                <ul>
-                                    <li><a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></li>
-                                    <li><a href="#" class="icon-button google"><i class="icon-google"></i><span></span></a></li>
-                                    <li><a href="#" class="icon-button v"><i class="icon-v"></i><span></span></a></li>
-                                </ul>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-3 team-grid">
-                    <figure class="thumb">
-                        <img src="{{ asset('packages/home/images/6.jpg') }}" alt=" " class="img-responsive" />
-                        <figcaption class="caption">
-                            <h3><a href="team.html">Ricky Roy</a></h3>
-                            <span>Inventor</span>
-                            <div class="footer-bottom-right social"> 
-                                <ul>
-                                    <li><a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></li>
-                                    <li><a href="#" class="icon-button google"><i class="icon-google"></i><span></span></a></li>
-                                    <li><a href="#" class="icon-button v"><i class="icon-v"></i><span></span></a></li>
-                                </ul>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-    </div>
 <!-- //team -->
 <!-- banner-bottom1 -->
-    <div class="banner-bottom1">
-            <div class="banner-bottom1-info">
-                <div class="col-md-6 banner-bottom1-left">
-                    <div class="banner-bottom1-left1">
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                        <h3>ut aliquip commodo consequat</h3>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                            cupidatat non proident.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 banner-bottom1-right">
-                    <div class="banner-bottom1-left1 right1">
-                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                        <h3>ut aliquip commodo consequat</h3>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                            cupidatat non proident.</p>
-                    </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-    </div>
 <!-- //banner-bottom1 -->
 <!-- footer -->
     <div class="footer">
         <div class="container">
-            <div class="footer-grids">
-                <div class="col-md-4 footer-grid-left">
-                    <h3>twitter feed</h3>
-                    <ul>
-                        <li><a href="single.html">It is a long established fact that a reader will 
-                        be distracted by the readable content of a page when looking at 
-                        its layout.</a><span>15 minutes ago</span></li>
-                        <li><a href="mailto:info@example.com" class="cols">@NASA</a> & <a href="mailto:info@example.com" class="cols">
-                            @orbital science</a> <a href="single.html">readable content of a page when looking at 
-                            its layout</a><span>45 minutes ago</span></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 footer-grid-left">
-                    <h3>Newsletter</h3>
-                    <form>
-                        <input type="email" value="enter your email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'enter your email address';}" required="">
-                        <input type="submit" value="Submit" >
-                    </form>
-                </div>
-                <div class="col-md-4 footer-grid-left">
-                    <h3>about us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-                        <span>But I must explain to you how all this mistaken idea of denouncing
-                        pleasure and praising pain was born and I will give you a complete 
-                        account of the system, and expound the actual teachings of the 
-                        great explorer.</span>
-                        </p>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-            <div class="footer-bottom">
+        
                 <div class="footer-bottom-left">
-                    <p>&copy 2016 Inventor. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts.</a></p>
+                    <p>Made with &hearts; by Delta Force</p>
                 </div>
                 <div class="footer-bottom-right">
                     <ul>
@@ -344,8 +216,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="#" class="icon-button v"><i class="icon-v"></i><span></span></a></li>
                     </ul>
                 </div>
-                <div class="clearfix"> </div>
-            </div>
         </div>
     </div>
 <!-- //footer -->

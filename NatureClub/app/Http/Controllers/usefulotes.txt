@@ -1,0 +1,11 @@
+
+
+To create any laravel project at --prefer-dist:
+
+# checking composer is successfully installed
+composer (composer is installed)
+# downloading and install via composer
+#composer create-project laravel/laravel --prefer-dist
+sudo composer create-project laravel/laravel /var/www/html/laravel3
+# setting up writable permission
+sudo chmod -R 777 /var/www/html/laravel3
